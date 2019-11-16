@@ -14,9 +14,9 @@ This is a hackintosh EFI built with Clover for the `Dell XPS 9570, i7-8750H, 4K`
 * SSD: PC401 NVMe SK hynix 512GB SSD
 * Audio: Realtek ALC298
 * Touchscreen
-* WLAN + Bluetooth : DW1830 (replaced)
+* WLAN + Bluetooth: DW1830 (replaced)
 
-## not driven
+## Not Working
 
 * Killer 1535 (Not supported)
 * Goodix fingerpint reader (Does not work in both MacOS and Linux)
@@ -47,7 +47,7 @@ This is the configuration file used during the Mojave installation phase, in ord
   
   `dpcd-max-link-rate` = `<14000000>`
 
-### `confug_1080P.plist`
+### `config_1080P.plist`
 
   This file is specifically designed to drive the XPS 9570 1080P version of the model, which is different from `config.plist` only in:
   
@@ -55,21 +55,41 @@ This is the configuration file used during the Mojave installation phase, in ord
 
 ## Steps for usage
 
-* 1.**Replace the installation volume EFI**: Delete the Clover folder that comes with the USB media EFI partition and replace it with Clover of this warehouse.
-* 2.**Use `config_install.plist`**: When entering the CLOVER startup interface, switch the configuration used by Clover to `config_install.plist`; or rename `config_install.plist` to `config.plist` first. , replace the original `config.plist` (note backup!) and then enter the interface
+1. Replace the installation volume EFI
 
-* 3.**Complete the initial installation**: Select the installation volume icon, enter the installation interface to complete the installation, if the process fails to install, etc., you can enter the installation interface multiple times (3~5 times)
+    Delete the Clover folder that comes with the USB media EFI partition and replace it with Clover of this warehouse.
 
-* 4.** Rebuild Cache**: After entering the desktop, run `sudo kextcache -i /` from the terminal to rebuild the cache
+2. Use `config_install.plist`
 
-* 5.** Use `config.plist(for 4k)`**: If the machine is a 4k version, use `config.plist` directly. Otherwise, see step 6
+    When entering the Clover, switch the configuration used by Clover to `config_install.plist` if `config.plist` does not boot your USB.
+
+3. Complete the initial installation
+    
+    Select the installation volume icon, enter the installation interface to complete the installation, if the process fails to install, etc., you can enter the installation interface multiple times (3~5 times)
+
+4. Rebuild Cache
+
+    After entering the desktop, run `sudo kextcache -i /` from the terminal to rebuild the cache
+
+5. Use `config.plist(for 4k)`
+
+    If the machine is a 4k version, use `config.plist` directly. Otherwise, see step 6
   
-* 6.** Use `config_1080p.plist`**: If the model is 1080p, rename `config_1080P.plist` to `config.plist` to replace the original config
-* 7.**Add three codes to generate**: This warehouse does not fill in the default three yards. If you want to activate Facetime and iMessage, please refer to [bavariancake] (https://github.com/bavariancake/XPS9570-macOS) The activation scheme provided, or the extraction of three yards in the white apple machine is used in this machine. If you do not have activation requirements, you can use `Clover Configruator` to edit `config.plist`. In the `SIMBIOS` item, select the model `MacBookPro15,1` and randomly generate a set of three codes.
+6. Use `config_1080p.plist`
 
-* 8.** Verify that UHD630 is driven**: If the display is already driven, the 4K display will automatically turn on HDpi. About the graphics card in the native report is displayed as `Intel UHD Graphics 630 2048 MB`
+    If the model is 1080p, rename `config_1080P.plist` to `config.plist` to replace the original config.
 
-* 9.** Add some drivers to `L/E` or `S/L/E` (optional)**: Based on this repository configuration, if you want the driver injection method to be closer to the white apple, please Following the driver installation method of [Complete Solution--Remove-v Mode](), it is recommended to keep only `VirtualSmc` in `CLOVE/kexts/Other`, and install the remaining drivers to `L/E` or `S/L /E`, then remove the drivers that have been installed in the `CLOVER/kexts/Ohter` path. Finally, rebuild the cache to restart the computer.
+7. Post installation
+
+    If you want to activate Facetime and iMessage, please refer to [bavariancake] (https://github.com/bavariancake/XPS9570-macOS) The activation scheme provided, or the extraction of three yards in the white apple machine is used in this machine. If you do not have activation requirements, you can use `Clover Configruator` to edit `config.plist`. In the `SIMBIOS` item, select the model `MacBookPro15,1` and randomly generate a set of three codes.
+
+8. Verify that UHD630 is driven
+
+    If the display is already driven, the 4K display will automatically turn on HDpi. About the graphics card in the native report is displayed as `Intel UHD Graphics 630 2048 MB`
+
+9. Add some drivers to `L/E` or `S/L/E` (optional)
+
+    Based on this repository configuration, if you want the driver injection method to be closer to the white apple, please Following the driver installation method of [Complete Solution--Remove-v Mode](), it is recommended to keep only `VirtualSmc` in `CLOVE/kexts/Other`, and install the remaining drivers to `L/E` or `S/L /E`, then remove the drivers that have been installed in the `CLOVER/kexts/Ohter` path. Finally, rebuild the cache to restart the computer.
    
 **Every time you update, just switch to config_install.plist to complete the installation. The first thing after entering the system is to rebuild the cache!**
 
