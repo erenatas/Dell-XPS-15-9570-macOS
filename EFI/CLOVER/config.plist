@@ -432,7 +432,7 @@
 				<key>device_type</key>
 				<string>Audio Controller</string>
 				<key>layout-id</key>
-				<integer>30</integer>
+				<integer>72</integer>
 				<key>model</key>
 				<string>Realtek ALC298</string>
 			</dict>
@@ -888,41 +888,23 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>09/28/2018</string>
+		<string>1017/2019</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBP151.88Z.F000.B00.1809280842</string>
-		<key>Board-ID</key>
-		<string>Mac-937A206F2EE63C01</string>
-		<key>BoardManufacturer</key>
-		<string>Apple Inc.</string>
+		<string>MBP151.88Z.F000.B00.1910172200</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
 		<string>1.0</string>
-		<key>ChassisAssetTag</key>
-		<string>MacBook-Aluminum</string>
 		<key>ChassisManufacturer</key>
 		<string>Apple Inc.</string>
-		<key>ChassisType</key>
-		<string>0x09</string>
-		<key>EfiVersion</key>
-		<string>220.250.320.0.0</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
-		<key>FirmwareFeatures</key>
-		<string>0xFC0FE137</string>
-		<key>FirmwareFeaturesMask</key>
-		<string>0xFF1FFF3F</string>
-		<key>LocationInChassis</key>
-		<string>Part Component</string>
 		<key>Manufacturer</key>
 		<string>Apple Inc.</string>
 		<key>Mobile</key>
 		<true/>
-		<key>PlatformFeature</key>
-		<string>0x1A</string>
 		<key>ProductName</key>
 		<string>MacBookPro15,1</string>
 		<key>Version</key>
